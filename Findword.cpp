@@ -99,3 +99,28 @@ int word(){
                 x=0;
             }
         }
+        for(int c=0;c<15;c++){
+            for(int m=0;m<=(15-len1);m++){
+                diag=-1;
+                for(int n=m;n<m+(len1-1);n++){
+                    ++diag;
+                    if(*(*(A+n)+c+diag)==kata[i][x])
+                        ada[x]=1;
+                    else
+                        ada[x]=0;
+                    x++;
+                }
+                for(int j=0;j<len1;j++){
+                    if(ada[j]==1){
+                        jadi=1;
+                        hasil[i]+=jadi;
+                    }
+                    else jadi=0;
+                    if(hasil[i]==len1){
+                        found[i]=1;
+                    }
+                }
+                hasil[i]=0;
+                x=0;
+            }
+        }
