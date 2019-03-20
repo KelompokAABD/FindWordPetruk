@@ -25,3 +25,12 @@ using namespace std;
     char b15[]={'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'};
     char *A[]={b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13,b14,b15};
 
+//fungsi untuk memanggil puzzle
+char FindWord(){
+    for(int b=0;b<15;b++){
+        for(int k=0;k<15;k++)
+            cout<<*(*(A+b)+k)<<"|";
+            cout<<endl;
+    }
+    cout<<endl;
+}
