@@ -3,11 +3,11 @@
    1817051021 Arafia Isnayu Akaf
    1817051049 Bobby Malela
 */
-// Buat program dengan kosep pointer bahasa C++ untuk menyelesaikan permainan cari kata.
+// Buat program dengan konsep pointer bahasa C++ untuk menyelesaikan permainan cari kata.
 #include <iostream>
 #include <cstring>
 using namespace std;
-
+//Dibawah ini adalah gambar dari game cari kata
     char b1[]={'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'};
     char b2[]={'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'};
     char b3[]={'j','l','w','c','q','l','d','z','m','p','m','v','d','m','r'};
@@ -36,7 +36,7 @@ char FindWord(){
 }
 int word(){
     int jumlah;
-    cout<<" Berapa kata yang ingin di cari = ";
+    cout<<" Berapa kata yang ingin di cari = "; // ini Adalah Input program
     cin>>jumlah;
     int len[jumlah];
     int diag;
@@ -152,7 +152,7 @@ int word(){
         x=0;
     }
     cout<<endl;
-    cout<<"HASIL"<<endl<<endl;
+    cout<<"HASIL"<<endl<<endl; // ini adalah output program
     for(int k=0;k<jumlah;k++){
         if(found[k]==1)
             cout<<"ada"<<endl;
@@ -167,3 +167,4 @@ int main (){
     
     return 0;
 }
+// Akhir Dari Program Findword
