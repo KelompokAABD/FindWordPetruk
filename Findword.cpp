@@ -1,6 +1,6 @@
 /* 1857051014 Muhammad Nur Ashiddiqi
    1817051005 Arfina Shella Meilany
-   1817051029 Arafia Isnayu Akaf
+   1817051021 Arafia Isnayu Akaf
    1817051049 Bobby Malela
 */
 // Buat program dengan kosep pointer bahasa C++ untuk menyelesaikan permainan cari kata.
@@ -48,3 +48,31 @@ int word(){
         cin.getline(kata[p],15);
         len[p]=strlen(kata[p]);
     }
+   for(int i=0;i<jumlah;i++){
+        hasil[i]=0;
+        int len1=len[i],x=0;
+        bool ada[len1], jadi;
+
+        for(int a=0;a<15;a++){
+            for(int l=0;l<=(15-len1);l++){
+                for (int w=l;w<=l+(len1-1);w++){
+                    if(*(*(A+a)+w)==kata[i][x])
+                        ada[x]=1;
+                    else
+                        ada[x]=0;
+                    x++;
+                }
+                for(int j=0;j<len1;j++){
+                    if(ada[j]==1){
+                        jadi=1;
+                        hasil[i]+=jadi;
+                    }
+                    else jadi=0;
+                    if(hasil[i]==len1){
+                        found[i]=1;
+                    }
+                }
+                hasil[i]=0;
+                x=0;
+            }
+        }
