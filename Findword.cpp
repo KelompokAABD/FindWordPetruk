@@ -76,3 +76,26 @@ int word(){
                 x=0;
             }
         }
+        for(int b=0;b<15;b++){
+            for(int l=0;l<=(15-len1);l++){
+                for(int w=l;w<=l+(len1-1);w++){
+                    if(*(*(A+w)+b)==kata[i][x])
+                        ada[x]=1;
+                    else
+                        ada[x]=0;
+                    x++;
+                }
+                for(int j=0;j<len1;j++){
+                    if(ada[j]==1){
+                        jadi=1;
+                        hasil[i]+=jadi;
+                    }
+                    else jadi=0;
+                    if(hasil[i]==len1){
+                        found[i]=1;
+                    }
+                }
+                hasil[i]=0;
+                x=0;
+            }
+        }
