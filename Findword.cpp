@@ -151,3 +151,19 @@ int word(){
         }
         x=0;
     }
+    cout<<endl;
+    cout<<"HASIL"<<endl<<endl;
+    for(int k=0;k<jumlah;k++){
+        if(found[k]==1)
+            cout<<"ada"<<endl;
+        else
+            cout<<"tidak ada"<<endl;
+    }
+}
+
+int main (){
+    FindWord();
+    word();
+    
+    return 0;
+}
